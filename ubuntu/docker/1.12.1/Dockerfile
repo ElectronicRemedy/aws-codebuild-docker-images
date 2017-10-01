@@ -74,6 +74,8 @@ RUN set -x \
     && rm -rf /var/lib/apt/lists/* \
     && apt-get clean
 
+RUN apt-get -qq install -y maven
+
 VOLUME /var/lib/docker
 
 ENTRYPOINT ["dockerd-entrypoint.sh"]
